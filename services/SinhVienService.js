@@ -1,4 +1,11 @@
 var SinhVienService = function () {
+    this.themSinhVien = function (sinhVienUpdate) {
+        return axios({
+            url:'http://svcy.myclass.vn/api/SinhVien/ThemSinhVien',
+            method:'POST',
+        })
+    }
+
     this.xoaSinhVien = function (maSV) {
         return axios({
             url:'http://svcy.myclass.vn/api/SinhVien/XoaSinhVien/' + maSV,
